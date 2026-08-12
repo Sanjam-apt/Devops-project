@@ -1,5 +1,9 @@
 .git
+.github
 .gitignore
-README.md
 node_modules
-*.log
+npm-debug.log
+*.md
+.env
+.vscode
+.idea
