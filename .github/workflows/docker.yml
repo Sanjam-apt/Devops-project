@@ -1,4 +1,4 @@
-name: Docker Build
+name: DevOps CI
 
 on:
   push:
@@ -9,12 +9,28 @@ on:
       - main
 
 jobs:
-  docker-build:
+  docker:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout source code
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t devops-portfolio .
+        run: docker build -t devops-portfolio:test .
+
+      - name: Run container
+        run: |
+          docker run -d \
+            --name devops-test \
+            -p 8080:80 \
+            devops-portfolio:test
+
+      - name: Test application
+        run: |
+          sleep 5
+          curl --fail http://localhost:8080
+
+      - name: Stop container
+        if: always()
+        run: docker rm -f devops-test
