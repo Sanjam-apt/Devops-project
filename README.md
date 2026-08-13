@@ -26,6 +26,26 @@ whenever changes are pushed to the main branch.
 
 ![Portfolio Website](screenshots/portfolio.png)
 
+## Deployment Screenshots
+
+### Docker Container
+
+The application was tested locally using Docker Compose. The container runs Nginx and includes a health check to verify that the application is responding correctly.
+
+![Docker Container](screenshots/docker-compose-ps.png)
+
+### GitHub Actions
+
+GitHub Actions automatically runs the CI pipeline on changes pushed to the `main` branch. The workflow builds the Docker image, scans it with Trivy, runs the container, and tests the application.
+
+![GitHub Actions](screenshots/devops-ci.png)
+
+### Render Deployment
+
+The Dockerized application is deployed on Render and connected to the `main` branch of the GitHub repository.
+
+![Render Deployment](screenshots/render.png)
+
 ## Live Demo
 
 [View the live portfolio](https://devops-portfolio-ymuy.onrender.com)
@@ -81,6 +101,7 @@ GitHub → GitHub Actions → Docker Build → Trivy Scan → Application Test �
 - Trivy vulnerability scanning
 - Automated website testing with GitHub Actions
 - Continuous Integration pipeline
+
 
 ## Project Architecture
 
