@@ -26,6 +26,10 @@ whenever changes are pushed to the main branch.
 
 ![Portfolio Website](screenshots/portfolio.png)
 
+## Live Demo
+
+[View the live portfolio](https://devops-portfolio-ymuy.onrender.com)
+
 ## Technologies Used
 
 This project uses the following technologies and tools:
@@ -53,6 +57,14 @@ The pipeline:
 6. Removes the test container after the workflow finishes.
 
 This helps ensure that changes are automatically tested before they are considered ready.
+
+## Deployment
+
+The application is containerized using Docker and served through Nginx. The Docker container is deployed as a web service on Render.
+
+The deployment process uses the following flow:
+
+GitHub → GitHub Actions → Docker Build → Trivy Scan → Application Test → Render Deployment
 
 ## Features
 
