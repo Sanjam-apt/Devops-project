@@ -1,3 +1,5 @@
+![DevOps CI](https://github.com/Sanjam-apt/Devops-project/actions/workflows/docker.yml/badge.svg)
+
 # Containerized DevOps Portfolio
 
 This project is a personal portfolio website that I built and then
