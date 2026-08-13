@@ -22,6 +22,10 @@ is responding correctly.
 GitHub Actions is used to automatically build and test the Docker image
 whenever changes are pushed to the main branch.
 
+## Project Preview
+
+![Portfolio Website](screenshots/portfolio.png)
+
 ## Technologies Used
 
 This project uses the following technologies and tools:
