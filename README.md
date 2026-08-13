@@ -39,6 +39,21 @@ This project uses the following technologies and tools:
 - GitHub Actions for Continuous Integration
 - Trivy for Docker image vulnerability scanning
 
+## CI/CD Pipeline
+
+The project uses GitHub Actions to automatically validate every change pushed to the repository.
+
+The pipeline:
+
+1. Checks out the source code.
+2. Builds the Docker image.
+3. Scans the image for HIGH and CRITICAL vulnerabilities using Trivy.
+4. Runs the Docker container.
+5. Tests the application using HTTP.
+6. Removes the test container after the workflow finishes.
+
+This helps ensure that changes are automatically tested before they are considered ready.
+
 ## Features
 
 - Responsive personal portfolio website
